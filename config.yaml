@@ -1,0 +1,44 @@
+# =====================================================================
+#  VetPod — configuration
+#  Podcast hebdomadaire des nouveautés en médecine des petits animaux
+# =====================================================================
+
+podcast:
+  title: "VetPod Hebdo — La veille scientifique des petits animaux"
+  author: "VetPod"
+  email: "contact@example.com"          # adresse affichée dans le flux RSS
+  description: >
+    Chaque semaine, une synthèse des études vétérinaires publiées dans les
+    revues internationales à comité de lecture, consacrée aux chiens, aux chats
+    et aux petits animaux de compagnie, classée par discipline.
+  language: "fr"
+  base_url: "https://VOTRE-UTILISATEUR.github.io/vetpod"   # URL publique des fichiers
+  cover_image: "cover.jpg"               # image carrée 3000x3000 à placer dans docs/
+
+# --- Période et volume ------------------------------------------------
+search:
+  days_back: 7                 # fenêtre de collecte (jours)
+  max_articles_total: 18       # nombre maximum d'études présentées par épisode
+  max_per_discipline: 4
+  include_exotics: false       # true = inclure lapins, furets, cobayes, rongeurs, oiseaux de compagnie
+  require_abstract: true       # ignorer les articles sans résumé
+  ncbi_api_key: ""             # optionnel (ou variable NCBI_API_KEY) : 10 req/s au lieu de 3
+  ncbi_email: ""               # recommandé par le NCBI
+
+# --- Génération du texte ---------------------------------------------
+llm:
+  enabled: true                # false = script généré sans IA (lecture structurée des résumés)
+  model: "claude-sonnet-5-5"   # clé dans la variable ANTHROPIC_API_KEY
+  hosts: 2                     # 1 = narrateur seul, 2 = dialogue entre deux animateurs
+  host_names: ["Claire", "Thomas"]
+  target_minutes: 20
+
+# --- Synthèse vocale -------------------------------------------------
+tts:
+  engine: "edge"               # "edge" (gratuit, Microsoft Edge TTS) ou "none" (texte seulement)
+  voices: ["fr-CH-ArianeNeural", "fr-CH-FabriceNeural"]   # ou fr-FR-DeniseNeural / fr-FR-HenriNeural
+  rate: "+0%"
+
+output:
+  public_dir: "docs"           # servi par GitHub Pages ; contient feed.xml, épisodes mp3, notes d'épisode
+  work_dir: "work"

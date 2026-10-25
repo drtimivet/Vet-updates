@@ -1,0 +1,52 @@
+# =====================================================================
+#  Revues sources — uniquement des revues internationales à comité de
+#  lecture, indexées dans PubMed/MEDLINE. Le champ "pubmed" est le titre
+#  abrégé NLM utilisé pour la recherche ([Journal]).
+#
+#  tier 1 = revues de référence en médecine des animaux de compagnie
+#           (souvent organes officiels des collèges ACVIM/ECVIM, ESVD,
+#           ISFM, ACVS/ECVS, VECCS, ECVDI...)
+#  tier 2 = revues généralistes vétérinaires de haut niveau
+#  tier 3 = revues en accès libre à large spectre (sélection plus stricte
+#           appliquée : seuls les articles portant clairement sur le chien
+#           ou le chat sont retenus)
+#
+#  "hint" oriente la classification quand la revue est spécialisée.
+# =====================================================================
+
+journals:
+  # ---------- Tier 1 : spécialités petits animaux ----------
+  - {name: "Journal of Veterinary Internal Medicine", pubmed: "J Vet Intern Med", tier: 1}
+  - {name: "Journal of Small Animal Practice", pubmed: "J Small Anim Pract", tier: 1}
+  - {name: "Journal of Feline Medicine and Surgery", pubmed: "J Feline Med Surg", tier: 1}
+  - {name: "Veterinary Dermatology", pubmed: "Vet Dermatol", tier: 1, hint: dermatologie}
+  - {name: "Veterinary and Comparative Oncology", pubmed: "Vet Comp Oncol", tier: 1, hint: oncologie}
+  - {name: "Journal of Veterinary Cardiology", pubmed: "J Vet Cardiol", tier: 1, hint: cardiologie}
+  - {name: "Veterinary Surgery", pubmed: "Vet Surg", tier: 1, hint: chirurgie}
+  - {name: "Veterinary and Comparative Orthopaedics and Traumatology", pubmed: "Vet Comp Orthop Traumatol", tier: 1, hint: chirurgie}
+  - {name: "Journal of Veterinary Emergency and Critical Care", pubmed: "J Vet Emerg Crit Care (San Antonio)", tier: 1, hint: urgences}
+  - {name: "Veterinary Anaesthesia and Analgesia", pubmed: "Vet Anaesth Analg", tier: 1, hint: anesthesie}
+  - {name: "Veterinary Ophthalmology", pubmed: "Vet Ophthalmol", tier: 1, hint: ophtalmologie}
+  - {name: "Veterinary Radiology & Ultrasound", pubmed: "Vet Radiol Ultrasound", tier: 1, hint: imagerie}
+  - {name: "Veterinary Clinical Pathology", pubmed: "Vet Clin Pathol", tier: 1, hint: biologie}
+  - {name: "Journal of Veterinary Dentistry", pubmed: "J Vet Dent", tier: 1, hint: dentisterie}
+
+  # ---------- Tier 2 : généralistes de référence ----------
+  - {name: "Journal of the American Veterinary Medical Association (JAVMA)", pubmed: "J Am Vet Med Assoc", tier: 2}
+  - {name: "American Journal of Veterinary Research", pubmed: "Am J Vet Res", tier: 2}
+  - {name: "The Veterinary Journal", pubmed: "Vet J", tier: 2}
+  - {name: "Veterinary Record", pubmed: "Vet Rec", tier: 2}
+  - {name: "Veterinary Pathology", pubmed: "Vet Pathol", tier: 2}
+  - {name: "Journal of Veterinary Pharmacology and Therapeutics", pubmed: "J Vet Pharmacol Ther", tier: 2, hint: pharmacologie}
+  - {name: "Veterinary Parasitology", pubmed: "Vet Parasitol", tier: 2, hint: infectiologie}
+  - {name: "Veterinary Microbiology", pubmed: "Vet Microbiol", tier: 2, hint: infectiologie}
+  - {name: "Theriogenology", pubmed: "Theriogenology", tier: 2, hint: reproduction}
+  - {name: "Reproduction in Domestic Animals", pubmed: "Reprod Domest Anim", tier: 2, hint: reproduction}
+  - {name: "Journal of Comparative Pathology", pubmed: "J Comp Pathol", tier: 2}
+  - {name: "Schweizer Archiv für Tierheilkunde", pubmed: "Schweiz Arch Tierheilkd", tier: 2}
+  - {name: "Tierärztliche Praxis Ausgabe K: Kleintiere/Heimtiere", pubmed: "Tierarztl Prax Ausg K Kleintiere Heimtiere", tier: 2}
+
+  # ---------- Tier 3 : accès libre, large spectre ----------
+  - {name: "Frontiers in Veterinary Science", pubmed: "Front Vet Sci", tier: 3}
+  - {name: "BMC Veterinary Research", pubmed: "BMC Vet Res", tier: 3}
+  - {name: "Veterinary Medicine and Science", pubmed: "Vet Med Sci", tier: 3}
