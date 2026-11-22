@@ -90,7 +90,7 @@ class Writer:
         try:
             s = self._ask_json(SUMMARY_SYSTEM, SUMMARY_USER.format(
                 journal=a.journal, date=a.pub_date, species=", ".join(a.species), evidence=a.evidence,
-                disciplines=disc, discipline=a.discipline, title=a.title, abstract=a.abstract), 1500)
+                disciplines=disc, discipline=a.discipline, title=a.title, abstract=a.abstract), 3000)
         except Exception as e:  # robustesse : un échec n'arrête pas l'épisode
             print(f"  ! résumé IA impossible pour PMID {a.pmid} ({e}) — mode de secours")
             return fallback_summary(a)
